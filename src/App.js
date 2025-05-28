@@ -5,6 +5,8 @@ import {
   ChartBarSquareIcon,
   BoltIcon,
 } from "@heroicons/react/24/outline";
+import FadeInSection from "./FadeInSection"; // import at the top
+
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -219,6 +221,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
+      <FadeInSection>
       <section style={styles.hero}>
         <div style={styles.badge}>AI-Powered Demo Platform</div>
         <div style={styles.heroTitle}>
@@ -231,8 +234,10 @@ function App() {
         </div>
        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4-JMALr0ALbJHETjmlZflgtQZf9R9zEeR_2b6sZZigVW80g/viewform?usp=sharing&ouid=100207346408315453845"><button style={styles.btn}>Join Waitlist</button></a> 
       </section>
+      </FadeInSection>
 
       {/* Demo Section */}
+      <FadeInSection delay={0.3}>
       <section style={styles.section}>
         <div
           style={{
@@ -360,8 +365,11 @@ function App() {
           </div>
         </div>
       </section>
+      </FadeInSection>
+      
 
       {/* Benefits Section */}
+      <FadeInSection delay={0.3}>
       <section style={styles.benefits}>
         <div style={styles.badge}>Benefits</div>
         <div style={styles.benefitsTitle}>Why use Qudemo?</div>
@@ -408,8 +416,10 @@ function App() {
           )}
         </div>
       </section>
+      </FadeInSection>
 
       {/* CTA Section */}
+      <FadeInSection delay={0.3}>
       <section style={styles.cta}>
         <div style={styles.ctaTitle}>
           Ready to transform your product demos?
@@ -420,6 +430,7 @@ function App() {
         </div>
         <button style={styles.btn}>Join Waitlist</button>
       </section>
+        </FadeInSection>
 
       {/* Footer */}
       <footer style={styles.footer}>
