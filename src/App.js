@@ -111,7 +111,7 @@ function App() {
     },
     demoImg: {
       width: isMobile ? "100%" : 340,
-      height: 240,
+      height: isMobile ? 200 : 240,
       background: "#f4f7fa",
       borderRadius: "12px",
       border: "2px solid #eaf0ff",
@@ -178,20 +178,6 @@ function App() {
       maxWidth: 270,
       textAlign: "left",
     },
-    benefitIcon: {
-      fontSize: "2rem",
-      marginBottom: 12,
-    },
-    benefitTitle: {
-      fontWeight: 700,
-      fontSize: "1.1rem",
-      marginBottom: 8,
-    },
-    benefitDesc: {
-      color: "#555e6e",
-      fontSize: "1rem",
-      lineHeight: 1.5,
-    },
     cta: {
       textAlign: "center",
       padding: "64px 20px 48px 20px",
@@ -229,7 +215,7 @@ function App() {
       {/* Navigation */}
       <nav style={styles.nav}>
         <div style={styles.logo}>Qudemo</div>
-        <button style={styles.btn}>Join Waitlist</button>
+        {!isMobile && <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4-JMALr0ALbJHETjmlZflgtQZf9R9zEeR_2b6sZZigVW80g/viewform?usp=sharing&ouid=100207346408315453845"><button style={styles.btn}>Join Waitlist</button></a>}
       </nav>
 
       {/* Hero Section */}
@@ -240,31 +226,124 @@ function App() {
           <span style={styles.heroTitleHighlight}>answer questions</span>
         </div>
         <div style={styles.heroSub}>
-          Create interactive product demos with AI that let buyers self-discover your product without waiting for a sales rep.
+          Create interactive product demos with AI that let buyers self-discover
+          your product without waiting for a sales rep.
         </div>
-        <button style={styles.btn}>Join Waitlist</button>
+       <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4-JMALr0ALbJHETjmlZflgtQZf9R9zEeR_2b6sZZigVW80g/viewform?usp=sharing&ouid=100207346408315453845"><button style={styles.btn}>Join Waitlist</button></a> 
       </section>
 
       {/* Demo Section */}
       <section style={styles.section}>
-        <div style={styles.demoCard}>
-          <div style={styles.demoImg}>
-            <div style={{ width: "90%", height: "80%", background: "#fff", borderRadius: 8, border: "1px solid #eaf0ff", position: "relative" }}>
-              <div style={{ position: "absolute", top: 10, left: 10, width: 40, height: 18, background: "#eaf0ff", borderRadius: 6 }} />
-              <div style={{ position: "absolute", top: 10, left: 60, width: 120, height: 18, background: "#eaf0ff", borderRadius: 6 }} />
-              <div style={{ position: "absolute", top: 40, left: 10, width: 280, height: 40, background: "#eaf0ff", borderRadius: 8 }} />
-              <div style={{ position: "absolute", top: 90, left: 10, width: 120, height: 100, background: "#eaf0ff", borderRadius: 8 }} />
-              <div style={{ position: "absolute", top: 90, left: 140, width: 150, height: 100, background: "#eaf0ff", borderRadius: 8 }} />
+        <div
+          style={{
+            ...styles.demoCard,
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: isMobile ? "center" : "flex-start",
+            padding: isMobile ? 20 : 32,
+          }}
+        >
+          {/* Demo Image */}
+          <div
+            style={{
+              ...styles.demoImg,
+              width: isMobile ? "100%" : 340,
+              height: isMobile ? 220 : 240,
+            }}
+          >
+            <div
+              style={{
+                width: "90%",
+                height: "90%",
+                background: "#fff",
+                borderRadius: 8,
+                border: "1px solid #eaf0ff",
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  top: 10,
+                  left: 10,
+                  width: 40,
+                  height: 18,
+                  background: "#eaf0ff",
+                  borderRadius: 6,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 10,
+                  left: 60,
+                  width: 120,
+                  height: 18,
+                  background: "#eaf0ff",
+                  borderRadius: 6,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 40,
+                  left: 10,
+                  width: isMobile ? "80%" : 280,
+                  height: 40,
+                  background: "#eaf0ff",
+                  borderRadius: 8,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 90,
+                  left: 10,
+                  width: isMobile ? "40%" : 120,
+                  height: 100,
+                  background: "#eaf0ff",
+                  borderRadius: 8,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: 90,
+                  left: isMobile ? "50%" : 140,
+                  width: isMobile ? "45%" : 150,
+                  height: 100,
+                  background: "#eaf0ff",
+                  borderRadius: 8,
+                }}
+              />
             </div>
           </div>
-          <div style={styles.chatBox}>
-            <div style={styles.chatMsgUser}>How does your dashboard handle large datasets?</div>
-            <div style={styles.chatMsgBot}>
-              Our dashboard uses virtualized rendering to efficiently handle millions of rows. We also implement progressive loading and data compression to ensure smooth performance even with large datasets, while maintaining real-time filtering capabilities.
+
+          {/* Chat Box */}
+          <div
+            style={{
+              ...styles.chatBox,
+              width: isMobile ? "100%" : 320,
+              minHeight: 180,
+              marginTop: isMobile ? 24 : 0,
+            }}
+          >
+            <div style={styles.chatMsgUser}>
+              How does your dashboard handle large datasets?
             </div>
-            <div style={styles.chatMsgUser}>Can I customize the visualization components?</div>
             <div style={styles.chatMsgBot}>
-              Yes, all visualization components are fully customizable. You can modify colors, sizes, labels, and even create custom chart types using our component API. The dashboard also supports theming to match your brand identity and comes with 15 pre-built themes.
+              Our dashboard uses virtualized rendering to efficiently handle
+              millions of rows. We also implement progressive loading and data
+              compression to ensure smooth performance even with large datasets,
+              while maintaining real-time filtering capabilities.
+            </div>
+            <div style={styles.chatMsgUser}>
+              Can I customize the visualization components?
+            </div>
+            <div style={styles.chatMsgBot}>
+              Yes, all visualization components are fully customizable. You can
+              modify colors, sizes, labels, and even create custom chart types
+              using our component API. The dashboard also supports theming to
+              match your brand identity and comes with 15 pre-built themes.
             </div>
             <input
               style={{
@@ -286,46 +365,58 @@ function App() {
       <section style={styles.benefits}>
         <div style={styles.badge}>Benefits</div>
         <div style={styles.benefitsTitle}>Why use Qudemo?</div>
-        <div style={{ color: "#555e6e", fontSize: "1.15rem", marginBottom: 24 }}>
-          Let prospects explore your product without scheduling sales meetings, and capture valuable insights from every interaction.
+        <div
+          style={{ color: "#555e6e", fontSize: "1.15rem", marginBottom: 24 }}
+        >
+          Let prospects explore your product without scheduling sales meetings,
+          and capture valuable insights from every interaction.
         </div>
         <div style={styles.benefitsGrid}>
-          <div style={styles.benefitCard}>
-            <ClockIcon style={{ width: 28, height: 28, color: "#3a5cff", marginBottom: 12 }} />
-            <div style={styles.benefitTitle}>Save Time</div>
-            <div style={styles.benefitDesc}>
-              Reduce the time spent on repetitive sales meetings answering the same questions over and over again.
-            </div>
-          </div>
-          <div style={styles.benefitCard}>
-            <ChartBarIcon style={{ width: 28, height: 28, color: "#3a5cff", marginBottom: 12 }} />
-            <div style={styles.benefitTitle}>Increase Engagement</div>
-            <div style={styles.benefitDesc}>
-              Interactive demos provide a more engaging experience for buyers, increasing their understanding of your product.
-            </div>
-          </div>
-          <div style={styles.benefitCard}>
-            <ChartBarSquareIcon style={{ width: 28, height: 28, color: "#3a5cff", marginBottom: 12 }} />
-            <div style={styles.benefitTitle}>Capture Insights</div>
-            <div style={styles.benefitDesc}>
-              Gather data on what features prospects are most interested in and what questions they commonly ask.
-            </div>
-          </div>
-          <div style={styles.benefitCard}>
-            <BoltIcon style={{ width: 28, height: 28, color: "#3a5cff", marginBottom: 12 }} />
-            <div style={styles.benefitTitle}>Accelerate Sales</div>
-            <div style={styles.benefitDesc}>
-              Allow buyers to self-serve basic information, so your sales team can focus on high-value conversations.
-            </div>
-          </div>
+          {[ClockIcon, ChartBarIcon, ChartBarSquareIcon, BoltIcon].map(
+            (Icon, i) => (
+              <div style={styles.benefitCard} key={i}>
+                <Icon
+                  style={{
+                    width: 28,
+                    height: 28,
+                    color: "#3a5cff",
+                    marginBottom: 12,
+                  }}
+                />
+                <div style={styles.benefitTitle}>
+                  {
+                    [
+                      "Save Time",
+                      "Increase Engagement",
+                      "Capture Insights",
+                      "Accelerate Sales",
+                    ][i]
+                  }
+                </div>
+                <div style={styles.benefitDesc}>
+                  {
+                    [
+                      "Reduce the time spent on repetitive sales meetings answering the same questions over and over again.",
+                      "Interactive demos provide a more engaging experience for buyers, increasing their understanding of your product.",
+                      "Gather data on what features prospects are most interested in and what questions they commonly ask.",
+                      "Allow buyers to self-serve basic information, so your sales team can focus on high-value conversations.",
+                    ][i]
+                  }
+                </div>
+              </div>
+            )
+          )}
         </div>
       </section>
 
       {/* CTA Section */}
       <section style={styles.cta}>
-        <div style={styles.ctaTitle}>Ready to transform your product demos?</div>
+        <div style={styles.ctaTitle}>
+          Ready to transform your product demos?
+        </div>
         <div style={{ color: "#555e6e", fontSize: "1.1rem", marginBottom: 24 }}>
-          Create interactive AI-powered demos today and let buyers explore your product on their own terms.
+          Create interactive AI-powered demos today and let buyers explore your
+          product on their own terms.
         </div>
         <button style={styles.btn}>Join Waitlist</button>
       </section>
@@ -333,11 +424,18 @@ function App() {
       {/* Footer */}
       <footer style={styles.footer}>
         <div>
-          <span style={{ color: "#3a5cff", fontWeight: 700 }}>Qudemo</span> <span style={{ marginLeft: 8 }}>AI-Powered Interactive Product Demos</span>
+          <span style={{ color: "#3a5cff", fontWeight: 700 }}>Qudemo</span>
+          <span style={{ marginLeft: 8 }}>
+            AI-Powered Interactive Product Demos
+          </span>
         </div>
         <div style={styles.footerLinks}>
-          <a href="#" style={styles.footerLink}>Example Demo</a>
-          <a href="#" style={styles.footerLink}>Create Qudemo</a>
+          <a href="#" style={styles.footerLink}>
+            Example Demo
+          </a>
+          <a href="#" style={styles.footerLink}>
+            Create Qudemo
+          </a>
         </div>
       </footer>
     </div>
