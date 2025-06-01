@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "qudemo-waiting-list-clipboardai.vercel.app" }],
+      "destination": "https://qudemo-waiting-list-clipboardai.vercel.app/:1",
+      "permanent": true
+    }
+  ]
+}
