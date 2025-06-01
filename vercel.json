@@ -1,9 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "qudemo-waiting-list-clipboardai.vercel.app" }],
-      "destination": "https://qudemo-waiting-list-clipboardai.vercel.app/:1",
+      "source": "/:path*",
+      "destination": "https://qudemo-waiting-list-clipboardai.vercel.app/:path*",
       "permanent": true
     }
   ]
