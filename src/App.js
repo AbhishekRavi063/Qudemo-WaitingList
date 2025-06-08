@@ -161,6 +161,11 @@ function App() {
       fontSize: "2.2rem",
       fontWeight: 700,
       marginBottom: 12,
+      
+    },
+    benefitTitle:{
+      fontWeight: 600,
+      marginBottom: 12,
     },
     benefitsGrid: {
       display: "flex",
