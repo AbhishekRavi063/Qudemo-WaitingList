@@ -210,13 +210,19 @@ function App() {
       textDecoration: "none",
       fontWeight: 500,
     },
+    logo: {
+    width: isMobile ? 120 : 160, // adjust based on screen size
+    height: "auto",
+    marginLeft: isMobile ? 0 : 100,
+  },
+
   };
 
   return (
     <div style={styles.page}>
       {/* Navigation */}
       <nav style={styles.nav}>
-        <div style={styles.logo}>Qudemo</div>
+      <img src="/mainlogo.png" alt="Qudemo Logo" style={styles.logo} />
         {!isMobile && <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4-JMALr0ALbJHETjmlZflgtQZf9R9zEeR_2b6sZZigVW80g/viewform?usp=sharing&ouid=100207346408315453845"><button style={styles.btn}>Join Waitlist</button></a>}
       </nav>
 
