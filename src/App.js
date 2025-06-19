@@ -37,25 +37,27 @@ const App = () => {
         </div>
         {/* Grey div below logo */}
         <div
-          className="mx-auto mb-20 max-w-[1200px] w-full h-[600px] rounded-[40px] flex"
+          className="mx-auto mb-20 max-w-[1200px] w-full h-[550px] rounded-[40px] flex"
           style={{
-            backgroundColor: '#2a2a2a',
+            backgroundColor: '#1d1d1d',
             backgroundImage: `
-              radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 1px, transparent 1px),
-              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 1px, transparent 1px),
-              radial-gradient(circle at 40% 60%, rgba(255,255,255,0.04) 1px, transparent 1px),
-              radial-gradient(circle at 60% 40%, rgba(255,255,255,0.05) 1px, transparent 1px)
+              radial-gradient(circle at 25% 25%, rgba(255,255,255,0.015) 1px, transparent 1px),
+              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.01) 1px, transparent 1px),
+              radial-gradient(circle at 50% 50%, rgba(255,255,255,0.012) 1px, transparent 1px),
+              radial-gradient(circle at 10% 90%, rgba(255,255,255,0.02) 1px, transparent 1px),
+              radial-gradient(circle at 90% 10%, rgba(255,255,255,0.02) 1px, transparent 1px)
             `,
-            backgroundSize: '25px 25px',
-            backgroundPosition: '0 0, 12px 12px, 6px 18px, 18px 6px',
+            backgroundSize: '20px 20px',
+            backgroundPosition: '0 0, 10px 10px, 5px 15px, 15px 5px, 8px 8px',
           }}
+          
         >
           {/* Left side */}
-          <div className="flex-1 flex flex-col justify-center pl-16 pr-2">
-            <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[650px]">
-              Meet Your AI-Powered Demo Assistant
+          <div className="flex-1 flex flex-col justify-center ml-16 ">
+            <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[800px]">
+              Meet Your AI Powered Demo Assistant
             </h1>
-            <p className="text-2xl text-gray-200 mb-8 max-w-[550px]">
+            <p className="text-2xl text-gray-200 mb-8 max-w-[800px]">
               Engage your leads with an AI-powered demo that answers questions in real-time and captures intent instantly.
             </p>
             <button
@@ -67,7 +69,7 @@ const App = () => {
           </div>
           
           {/* Right side - image */}
-          <div className="flex-1 flex items-center justify-center pl-20 mb-[100px]">
+          <div className="flex-1 flex items-center justify-center ml-20 mb-[100px]">
             <div className="animate-breathing">
               <img 
                 src="/round.png" 
@@ -81,7 +83,7 @@ const App = () => {
           </div>
         </div>
         {/* Second section */}
-        <div className="mx-auto mt-[300px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
+        <div className="mx-auto mt-[500px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
           <div className="flex-1 flex flex-col justify-center pr-2 mt-32">
             <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[800px]">
               Experience Seamless Product Discovery
@@ -108,15 +110,16 @@ const App = () => {
                   key={idx}
                   className="w-[400px] h-[250px] rounded-[20px] flex items-center justify-center relative transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_32px_0_rgba(255,255,255,0.25)] cursor-pointer"
                   style={{
-                    backgroundColor: '#2a2a2a',
+                    backgroundColor: '#1d1d1d',
                     backgroundImage: `
-                      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 1px, transparent 1px),
-                      radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06) 1px, transparent 1px),
-                      radial-gradient(circle at 40% 60%, rgba(255,255,255,0.04) 1px, transparent 1px),
-                      radial-gradient(circle at 60% 40%, rgba(255,255,255,0.05) 1px, transparent 1px)
+                      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.015) 1px, transparent 1px),
+                      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.01) 1px, transparent 1px),
+                      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.012) 1px, transparent 1px),
+                      radial-gradient(circle at 10% 90%, rgba(255,255,255,0.02) 1px, transparent 1px),
+                      radial-gradient(circle at 90% 10%, rgba(255,255,255,0.02) 1px, transparent 1px)
                     `,
-                    backgroundSize: '25px 25px',
-                    backgroundPosition: '0 0, 12px 12px, 6px 18px, 18px 6px',
+                    backgroundSize: '20px 20px',
+                    backgroundPosition: '0 0, 10px 10px, 5px 15px, 15px 5px, 8px 8px',
                   }}
                 >
                   <span className="absolute top-5 left-5 w-14 h-14 rounded-full bg-purple-600 shadow-lg border-2 border-purple-700 flex items-center justify-center">
