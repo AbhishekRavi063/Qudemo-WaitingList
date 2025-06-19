@@ -32,7 +32,7 @@ const App = () => {
     <div style={{ background: 'black', minHeight: '100vh', width: '100vw' }}>
       <div className="bg-black flex flex-col min-h-screen">
         {/* Logo in top left */}
-        <div className="mt-[-40px] mb-10 ml-[80px]">
+        <div className="mt-[-40px]  ml-[80px]">
           <img src="/mainlogo.png" alt="Logo" className="h-64 w-auto" />
         </div>
         {/* Grey div below logo */}
@@ -58,12 +58,16 @@ const App = () => {
             <p className="text-2xl text-gray-200 mb-8 max-w-[550px]">
               Engage your leads with an AI-powered demo that answers questions in real-time and captures intent instantly.
             </p>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-2xl transition-colors duration-200 w-fit">
+            <button
+              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg  transition-colors duration-200 w-fit"
+              style={{ minWidth: '162px', minHeight: '50px' }}
+            >
               Get Early Access
             </button>
           </div>
+          
           {/* Right side - image */}
-          <div className="flex-1 flex items-center justify-center pl-20 mb-[20px]">
+          <div className="flex-1 flex items-center justify-center pl-20 mb-[100px]">
             <div className="animate-breathing">
               <img 
                 src="/round.png" 
@@ -77,7 +81,7 @@ const App = () => {
           </div>
         </div>
         {/* Second section */}
-        <div className="mx-auto mb-20 max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
+        <div className="mx-auto mt-[300px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
           <div className="flex-1 flex flex-col justify-center pr-2 mt-32">
             <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[800px]">
               Experience Seamless Product Discovery
@@ -125,14 +129,18 @@ const App = () => {
                 </div>
               ))}
             </div>
+            {/* Footer image below the 3 horizontal boxes */}
+            <div className="w-full flex justify-center mt-[200px]">
+              <img src="/footer.png" alt="Footer Decorative" className="w-[1200px] max-w-full h-auto rounded-[20px] mb-[100px]" />
+            </div>
           </div>
         </div>
        
       </div>
-        <div className="w-full flex justify-center items-center py-10">
+        <div className="w-full flex pl-[240px] pt-[225px] ">
           <button
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-2xl transition-colors duration-200 w-fit"
-            style={{ minWidth: '260px' }}
+            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg  transition-colors duration-200 w-fit"
+            style={{ minWidth: '162px', minHeight: '50px' }}
           >
             Get Early Access
           </button>
