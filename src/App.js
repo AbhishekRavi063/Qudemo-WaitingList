@@ -8,23 +8,9 @@ const App = () => {
       setScrollY(window.scrollY);
     };
 
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes breathing {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-      }
-      .animate-breathing {
-        animation: breathing 4s ease-in-out infinite;
-      }
-    `;
-    document.head.appendChild(style);
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      document.head.removeChild(style);
     };
   }, []);
 
@@ -32,12 +18,12 @@ const App = () => {
     <div style={{ background: 'black', minHeight: '100vh', width: '100vw' }}>
       <div className="bg-black flex flex-col min-h-screen">
         {/* Logo in top left */}
-        <div className="mt-[-40px]  ml-[80px]">
+        <div className="mt-[-60px]  ml-[80px]">
           <img src="/mainlogo.png" alt="Logo" className="h-64 w-auto" />
         </div>
         {/* Grey div below logo */}
         <div
-          className="mx-auto mb-20 max-w-[1200px] w-full h-[550px] rounded-[40px] flex"
+          className="mx-auto mt-[-40px] max-w-[1200px] w-full h-[550px] rounded-[40px] flex overflow-hidden"
           style={{
             backgroundColor: '#1d1d1d',
             backgroundImage: `
@@ -70,14 +56,11 @@ const App = () => {
           
           {/* Right side - image */}
           <div className="flex-1 flex items-center justify-center ml-20 mb-[100px]">
-            <div className="animate-breathing">
+            <div>
               <img 
                 src="/round.png" 
                 alt="Round Demo Assistant" 
-                className="w-80 h-80 object-contain transition-transform duration-300 ease-out"
-                style={{
-                  transform: `translateY(${Math.min(scrollY, 1200) * 0.7}px)`,
-                }}
+                className=" h-[600px] ml-[120px] mt-[340px] object-contain transition-transform duration-300 ease-out"
               />
             </div>
           </div>
@@ -92,7 +75,7 @@ const App = () => {
               Discover how our AI-Powered Demo Tool makes understanding products effortless. Just follow these simple steps to explore product features and get real-time answers instantly.
             </p>
             {/* 3 feature boxes */}
-            <div className="flex gap-10 pt-20">
+            <div className="flex gap-8 pt-20 ml-[-60px]">
               {[{
                 icon: "/star.png",
                 title: "Record Demo",
@@ -108,7 +91,7 @@ const App = () => {
               }].map((item, idx) => (
                 <div
                   key={idx}
-                  className="w-[400px] h-[250px] rounded-[20px] flex items-center justify-center relative transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_32px_0_rgba(255,255,255,0.25)] cursor-pointer"
+                  className="w-[420px] h-[230px] rounded-[20px] flex items-center justify-center relative transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_32px_0_rgba(255,255,255,0.25)] cursor-pointer"
                   style={{
                     backgroundColor: '#1d1d1d',
                     backgroundImage: `
@@ -133,14 +116,14 @@ const App = () => {
               ))}
             </div>
             {/* Footer image below the 3 horizontal boxes */}
-            <div className="w-full flex justify-center mt-[200px]">
-              <img src="/footer.png" alt="Footer Decorative" className="w-[1200px] max-w-full h-auto rounded-[20px] mb-[100px]" />
+            <div className="w-full mt-[200px]">
+              <img src="/footer.jpg" alt="Footer Decorative" className="w-[1200px] max-w-full h-auto rounded-[20px] mb-[100px] mx-auto block" />
             </div>
           </div>
         </div>
        
       </div>
-        <div className="w-full flex pl-[240px] pt-[225px] ">
+        <div className="w-full flex pl-[232px] pt-[215px] ">
           <button
             className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg  transition-colors duration-200 w-fit"
             style={{ minWidth: '162px', minHeight: '50px' }}
