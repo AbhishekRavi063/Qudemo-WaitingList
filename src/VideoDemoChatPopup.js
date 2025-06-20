@@ -163,7 +163,7 @@ const VideoDemoChatPopup = () => {
     >
       <div
         className="w-full max-w-7xl h-[600px] max-h-[85vh] bg-white rounded-lg flex flex-col md:flex-row overflow-hidden relative"
-        style={{ boxShadow: '0 0 40px 8px rgba(255,255,255,0.5)' }}
+        style={{ boxShadow: '0 0 40px 8px purple' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Video Section */}

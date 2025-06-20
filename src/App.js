@@ -55,8 +55,19 @@ const App = () => {
             </div>
           </div>
         </div>
+
+             {/* Video Demo Chat Popup */}
+             <h2 className="text-white text-5xl font-bold text-center mt-44 ">See in Action</h2>
+             <div className="flex justify-center -mt-6 mb-8">
+               <div className="w-[340px] h-4 bg-gradient-to-b from-transparent via-purple-500/60 to-purple-500/0 blur-2xl rounded-b-full"></div>
+             </div>
+             <div className="mt-40">
+            <VideoDemoChatPopup />
+          </div>
+            
+
         {/* Second section */}
-        <div className="mx-auto mt-[900px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
+        <div className="mx-auto mt-[500px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
           <div className="flex-1 flex flex-col justify-center pr-2 mt-32">
             <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[800px]">
               Experience Seamless Product Discovery
@@ -106,11 +117,7 @@ const App = () => {
               ))}
             </div>
 
-            {/* Video Demo Chat Popup */}
-          <div className="mt-60">
-            <VideoDemoChatPopup />
-          </div>
-            
+       
             {/* Footer image below the 3 horizontal boxes with button bottom left */}
             <div className="w-full mt-[200px] relative flex justify-center">
               <img src="/footer.jpg" alt="Footer Decorative" className="w-[1200px] max-w-full h-auto rounded-[20px] mb-[100px] mx-auto block" />
