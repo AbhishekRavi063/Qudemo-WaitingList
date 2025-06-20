@@ -1,21 +1,11 @@
-import { useState, useEffect } from 'react';
+import VideoDemoChatPopup from "./VideoDemoChatPopup";
 
 const App = () => {
-  const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
-    <div style={{ background: 'black', minHeight: '100vh', width: '100vw' }}>
+    <div style={{ background: 'black', width: '100vw' }}>
       <div className="bg-black flex flex-col min-h-screen">
         {/* Logo in top left */}
         <div className="mt-[-60px]  ml-[80px]">
@@ -66,7 +56,7 @@ const App = () => {
           </div>
         </div>
         {/* Second section */}
-        <div className="mx-auto mt-[500px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
+        <div className="mx-auto mt-[900px] max-w-[1200px] w-full h-[600px] rounded-[40px] flex">
           <div className="flex-1 flex flex-col justify-center pr-2 mt-32">
             <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[800px]">
               Experience Seamless Product Discovery
@@ -115,22 +105,28 @@ const App = () => {
                 </div>
               ))}
             </div>
-            {/* Footer image below the 3 horizontal boxes */}
-            <div className="w-full mt-[200px]">
+
+            {/* Video Demo Chat Popup */}
+          <div className="mt-60">
+            <VideoDemoChatPopup />
+          </div>
+            
+            {/* Footer image below the 3 horizontal boxes with button bottom left */}
+            <div className="w-full mt-[200px] relative flex justify-center">
               <img src="/footer.jpg" alt="Footer Decorative" className="w-[1200px] max-w-full h-auto rounded-[20px] mb-[100px] mx-auto block" />
+              <button
+                className="absolute left-20 bottom-36 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200 w-fit"
+                style={{ minWidth: '162px', minHeight: '50px' }}
+              >
+                Get Early Access
+              </button>
             </div>
+
+            
           </div>
         </div>
        
       </div>
-        <div className="w-full flex pl-[232px] pt-[215px] ">
-          <button
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg  transition-colors duration-200 w-fit"
-            style={{ minWidth: '162px', minHeight: '50px' }}
-          >
-            Get Early Access
-          </button>
-        </div>
     </div>
   );
 };
