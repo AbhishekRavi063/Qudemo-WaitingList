@@ -57,11 +57,14 @@ const App = () => {
         </div>
 
              {/* Video Demo Chat Popup */}
-             <h2 className="text-white text-5xl font-bold text-center mt-44 ">See in Action</h2>
+             <h2 className="text-white text-5xl font-bold text-center mt-44 ">See how it works - Instantly</h2>
+             <h2 className="text-white text-3xl font-bold text-center mt-20 ">Interact with a real Qudemo, like your buyer explore your product</h2>
+
              <div className="flex justify-center -mt-6 mb-8">
                <div className="w-[340px] h-4 bg-gradient-to-b from-transparent via-purple-500/60 to-purple-500/0 blur-2xl rounded-b-full"></div>
              </div>
-             <div className="mt-40">
+
+          <div className="mt-20">
             <VideoDemoChatPopup />
           </div>
             

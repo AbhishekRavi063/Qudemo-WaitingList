@@ -162,12 +162,12 @@ const VideoDemoChatPopup = () => {
       // onClick={handleClose}
     >
       <div
-        className="w-full max-w-7xl h-[600px] max-h-[85vh] bg-white rounded-lg flex flex-col md:flex-row overflow-hidden relative"
+        className="w-full max-w-[1200px]  h-[600px] max-h-[85vh] bg-white rounded-lg flex flex-col md:flex-row overflow-hidden relative"
         style={{ boxShadow: '0 0 40px 8px purple' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Video Section */}
-        <div className="w-full md:w-2/3 relative">
+        <div className="w-full md:w-2/3 relative ">
           <ReactPlayer
             key={videoUrl} // <-- add this line
             ref={playerRef}
