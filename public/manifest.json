@@ -3,9 +3,9 @@
   "name": "Qudemo - AI-Powered Demo Assistant",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "Icon.PNG",
       "type": "image/png",
-      "sizes": "512x512 256x256 192x192"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",

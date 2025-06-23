@@ -130,7 +130,7 @@ const VideoDemoChatPopup = () => {
     setIsTyping(true);
 
     try {
-      const res = await axios.post("https://qudemoo-backend.onrender.com/ask", {
+      const res = await axios.post("https://qudemo-backend.onrender.com/ask", {
         question: input,
       });
       //  https://qudemoo-backend.onrender.com
