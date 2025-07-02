@@ -530,20 +530,20 @@ const VideoDemoChatPopup = () => {
                 Ask questions about this demo
               </div>
               {/* Dropdown */}
-              <select
-                className="ml-2 px-2 py-1 rounded text-blue-700 text-xs sm:text-sm focus:outline-none cursor-pointer"
-                value={source}
-                onChange={handleSourceChange}
-              >
-                <option value="puzzle">Puzzle</option>
-                <option value="mixpanel">Mixpanel</option>
-              </select>
-            </div>
-            <XMarkIcon
-              className="h-5 w-5 cursor-pointer"
-              onClick={handleClose}
-            />
-          </div>
+          //     <select
+          //       className="ml-2 px-2 py-1 rounded text-blue-700 text-xs sm:text-sm focus:outline-none cursor-pointer"
+          //       value={source}
+          //       onChange={handleSourceChange}
+          //     >
+          //       <option value="puzzle">Puzzle</option>
+          //       <option value="mixpanel">Mixpanel</option>
+          //     </select>
+          //   </div>
+          //   <XMarkIcon
+          //     className="h-5 w-5 cursor-pointer"
+          //     onClick={handleClose}
+          //   />
+          // </div>
 
           {/* Chat Messages */}
           <div className="flex-1 p-3 overflow-y-auto space-y-3 bg-gray-50 text-sm">
