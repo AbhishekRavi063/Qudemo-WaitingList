@@ -31,7 +31,7 @@ const App = () => {
           {/* Left side */}
           <div className="flex-1 flex flex-col justify-center ml-16 ">
             <h1 className="text-[70px] font-bold text-white mb-6 leading-tight max-w-[800px]">
-              Meet Your AI Powered Demo Assistant
+              Turn Your Demo Videos Into Interactive
             </h1>
             <p className="text-2xl text-gray-200 mb-8 max-w-[800px]">
               Engage your leads with an AI-powered demo that answers questions in real-time and captures intent instantly.
